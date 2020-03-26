@@ -1,0 +1,23 @@
+* {
+    background-origin: border-box;
+
+}
+
+body {
+    width: 100%;
+    height: 50px;
+}
+
+
+.container {
+    width: 100%;
+    height: 50px;
+}
+
+.navbar1 {
+    width: 100%;
+    height: 50px;
+    padding-right: 0;
+    padding-left: 0;
+    padding:0;
+}
