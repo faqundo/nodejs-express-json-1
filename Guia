@@ -1,0 +1,40 @@
+1)npm init -y
+2)npm i express
+3)creo carpeta src + index.js
+  3.1) index.js > ejecuto el modulo express con request
+  3.2)index.js solo arrancará la aplicación.
+4) defino la estructura:
+    src = donde estaran todos mis archivos
+    src/public = todos los archivos publicos
+    src/routes = todas las URL que utilizare en el proyecto
+    src/views = todas las vistas
+    src/app.js = aquí estará escrita toda la aplicación.
+    src/books.json = va a simular nuestra base de datos. 
+5)asyn function main() = quiere decir que esa función adentro estará 
+    manejando codigo asincrono.  
+    Para definir la linea dentro de la función que será asincrona antecedo 
+        a esa linea con la palabra clave: await.
+6)index.js solo tendrá lo siguiente entonces:
+const app = require("./app");
+
+async function main() {       //avisamos que la función será asincrona
+    await app.listen(3000);  //linea asincrona
+    console.log("Server on port:3000");
+}
+main();
+7)trabajamos luego solo en app.js
+    7.1) Definimos la organinzación de app.js en secciones:
+        Settings   //__dirname nos da la dirección del archivo. 
+        Middlewares
+        Routes
+        Static
+8)npm i ejs //instalo el motor de plantilla que utilizaré, en este caso ejs.
+    8.1)en este caso como express trabaja por defecto con ejs, no hace falta que lo requiera como los otros modulos.simplemente utilizarlo
+9)npm i morgan // instalo el Middlewares que utilizare: en este caso MORGAN
+
+10)vinculacion de vistas, render ... 
+
+11)npm i nodemon  // para no estar actualizando el servidor a cada rato. modulo de node que reinicia el srv auto.
+    11.1)iniciamos desde el terminal:npx nodemon src/index.js
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("partials/head")%>
+    <title>New book</title>
+</head>
+<body>
+    <div class="container p-4">
+        <form method="POST" action="/new-entry" class="card card-body"><!--method y action (target: abriria una pestaña nueva) son lo que va a decir donde lo va a guardar-->
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" name="title" id="title" placeholder="Entry a new title" autofocus required>
+            </div>
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" class="form-control" name="author" id="author" placeholder="Author" required> <!--Lo importante de estos imput es name!!!!-->
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="text" class="form-control" name="image" id="image" placeholder="http://website.com" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" rows="2" class="form-control" required></textarea>
+            </div>
+            <input type="submit" value="Save Book" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+</html>
